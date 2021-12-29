@@ -6,8 +6,16 @@ const Nav = ({ groceries, view })=> {
   const purchased = groceries.filter(grocery => grocery.purchased);
   return (
     <nav>
-      <a href='#' className={ !view ? 'selected': ''}>All ({ groceries.length })</a>
-      <a href='#needs' className={ view === 'needs' ? 'selected': ''}>Needs ({ needs.length})</a>
+      <a 
+        href='#' 
+        className={ !view ? 'selected': ''}>
+          All({ groceries.length })
+      </a>
+      <a 
+        href='#needs' 
+        className={ view === 'needs' ? 'selected': ''}>
+          Needs ({ needs.length})
+      </a>
       <a href='#purchased' className={ view === 'purchased' ? 'selected': ''}>Purchased ({ purchased.length })</a>
     </nav>
   );
