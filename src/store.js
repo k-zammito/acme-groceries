@@ -32,6 +32,8 @@ const groceries = (state = [], action) => {
   return state;
 };
 
+//THUNKS
+
 export const toggle = (grocery) => {
   return async (dispatch) => {
     const updated = (
